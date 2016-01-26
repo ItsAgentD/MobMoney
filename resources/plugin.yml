@@ -1,0 +1,9 @@
+name: mobmoney
+version: 1.0.0
+description: A simple mod that gives money for killing mobs!
+author: ItsAgentD
+website: http://forums.com
+
+main: com.itsagentd.mobmoney.MobMoney
+database: false
+depend: [Vault]
