@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="MobMoney" default="dist" basedir=".">
+	<property name="src" location="src"/>
+	<property name="dist" location="dist"/>
+	<property name="bin" location="bin"/>
+	<property name="lib" location="../lib"/>
+
+	<path id="classpath">
+		<fileset dir="${lib}" includes="**/*.jar"/>
+	</path>
+	
+    <target name="init">
+		<mkdir dir="${bin}"/>
+		<mkdir dir="${dist}"/>
+	</target>
+	
+	<target name="compile" depends="init">
+		<javac includeantruntime="false" srcdir="${src}" destdir="${bin}" classpathref="classpath"/>
+	</target>
+	
+	<target name="dist" depends="compile">
+		<jar jarfile="${dist}/MobMoney.jar">
+			<fileset dir="${bin}"/>
+			<fileset dir="resources"/>
+		</jar>
+	</target>
+	
+	<target name="clean">
+		<delete dir="${dist}"/>
+		<delete dir="${bin}"/>
+	</target>
+</project>
