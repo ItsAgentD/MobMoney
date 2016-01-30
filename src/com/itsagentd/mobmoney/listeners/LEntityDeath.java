@@ -57,17 +57,11 @@ public class LEntityDeath implements Listener {
 			if (spawnerList.get(entity.getUniqueId()) != null ) {
 				spawnedFromSpawner = true;
 			}
-			
-			// double random = ThreadLocalRandom.current().nextDouble(5, 10);
 
-			if (spawnedFromSpawner != false) {
+			if (spawnedFromSpawner == true && config.getBoolean("general.moneyfromspawners") == true) {
 				spawnerList.remove(entity.getUniqueId());
-				MobMoney.log.info("MOB KILLED FROM SPAWNER!");
 				return;
-			} else {
-				MobMoney.log.info("MOB NOT KILLED FROM SPAWNER!");
 			}
-
 			switch (entity.getName()) {
 
 			case "Bat":

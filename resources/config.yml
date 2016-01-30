@@ -1,9 +1,10 @@
 # config.yml for MobMoney
-# v1.0.0
+# v1.0.2
 
 # General settings.
 general:
   consoleoutput: false
+  moneyfromspawners: false
   
 # Amounts.
 # Setting any of these vaules to "0" or less will disable rewards for that mob.
@@ -12,6 +13,7 @@ amounts:
     bat: 0.0
     chicken: 0.0
     cow: 0.0
+    horse: 0.0
     mooshroom: 0.0
     ocelot: 0.0
     pig: 0.0
@@ -31,7 +33,6 @@ amounts:
     ghast: 0.0
     giant: 0.0
     guardian: 0.0
-    horse: 0.0
     irongolem: 0.0
     killerrabbit: 0.0
     magmacube: 0.0
